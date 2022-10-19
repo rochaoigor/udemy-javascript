@@ -1,0 +1,12 @@
+let nome = ['Igor', 'Julia', 'Raquel','Lais', 'Tiago']
+
+for(let i = 0; 1 < nome.length;i++){
+    console.log(i)
+}
+
+for (let i in nome) {
+    console.log(nome[i])
+}
+
+for(let valor of nome) //acessa somente o valores, o mesmo que o acima//
+console.log(valor)

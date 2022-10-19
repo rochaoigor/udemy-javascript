@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="butao">Clique para Começar</button>
+    <section id="fala"></section>
+    <script>
+        function calculo () {
+           let numero = Number(prompt('Digite um número'))
+           let speak = document.querySelector('#fala')
+           let resultado = numero % 2
+           if (numero%2 == 0) { 
+               speak.innerHTML = `O ${numero} é PAR`
+           }else {
+            speak.innerHTML = `O ${numero} É impar `
+           }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p></p>
+    <script>
+        let gatos = ['Shanks', 'Pantera', 'Jesse','Pipoca','Neko']
+        let info = 'Meus gatos se chamam: '
+        let res = document.querySelector('p');
+
+        for (let i = 0; i < gatos.length; i++) {
+  if (i === gatos.length - 1) {
+    info += 'and ' + gatos[i] + '.';
+  } else {
+    info += gatos[i] + ', ';
+  }
+}
+        res.textContent = info;
+
+        /* i = iterador 
+        Foi dito para executar até que não seja menor que o comprimento do array dos gatos. Isso é importante - a condição de saída mostra a condição sob a qual o loop ainda será executado. No caso, enquanto i < cats.length for verdadeiro, o loop continuará executando. 
+        
+        Dentro do loop, nós concatenamos o item de loop atual (cats[i] é cats[o nome do item que está iterado no momento]) junto com uma vírgula e um espaço, no final da variável info . Assim:
+        */
+        </script>
+</body>
+</html>

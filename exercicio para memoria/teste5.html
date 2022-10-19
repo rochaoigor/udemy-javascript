@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        * {
+            padding:0;
+            margin:0;
+        }
+        body {
+            background-color:rgba(0, 0, 0, 0.648);
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        main {
+            margin-top:80px;
+        }
+        p {
+            display:inline-block;
+            text-align:center;
+            color:white;
+            font-size:2em;
+            background-color:red;
+            width:400px;
+            border-radius:10px;
+            text-transform:uppercase;
+            letter-spacing: 1px;
+            cursor:pointer;
+            
+        }
+    </style>
+</head>
+<body>
+    
+        
+    <p id="addNome">Digite um nome:</p>
+
+
+<script>
+    let recebe = document.querySelector('#addNome');
+    
+        let nome = prompt('Digite seu nome!');
+        recebe.textContent = 'Digite um nome:' + nome; 
+    
+    
+</script>
+
+</body>
+
+</html>

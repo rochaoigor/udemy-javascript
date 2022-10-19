@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Tabuada</title>
+</head>
+<body>
+    <header>
+    <h1>Tabuada</h1>
+    </header>
+    <main>
+    <form>
+        <p>Insira um número na caixa e eu te mostrarei a tabuada dele.</p>
+        <input type="text" name="caixa" id="caixa">
+        <p id="resposta"></p>
+        <button>Tabuada</button>
+    </form>
+</main>
+    <script>
+        let form = document.querySelector('form')
+        form.addEventListener('submit', function(e){
+            e.preventDefault();
+            let res = document.querySelector('#resposta')
+            let input = Number(document.querySelector('#caixa').value)
+            res.innerHTML += `<p>Tabuada de ${input}</p>`
+           let contador = 1
+           while (contador <=10) {
+            res.innerHTML += `${input} x ${contador} = ${input*contador}<br>`
+            contador++
+           }
+        })
+    </script>
+</body>
+</html>

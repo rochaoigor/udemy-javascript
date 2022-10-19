@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Marcando os Pares</h1>
+    <button onclick="clicar()">Contar de 1 a 10</button>
+    <p id="resposta"></p>
+    <script>
+        function clicar() {
+            let res = document.querySelector('p')
+            res.innerHTML += `<h2>Contando de 1 a 10, mostrando somente os pares</h2>`
+            let contador = 2
+
+            while (contador <=10) {
+                res.innerHTML += `${contador}`
+                contador+=2
+            }
+
+        }
+    </script>
+</body>
+</html>

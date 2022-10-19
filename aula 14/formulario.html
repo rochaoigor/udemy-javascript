@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Contando de 0 até um número positivo qualquer</h1>
+    <form>
+        <input type="number" name="caixa" id="caixa">
+        <button>Clique aqui</button>
+        <p id="resposta"></p>
+    </form>
+    <script>
+        let form = document.querySelector('form')
+        form.addEventListener('submit', function(e){
+            e.preventDefault()
+            let res = document.querySelector('p')
+             
+            let input = Number(document.querySelector('#caixa').value)   
+            res.innerHTML = `<h2>Contando de 0 até ${input}</h2>` 
+            contador=0
+          while (contador <= input) {
+            res.innerHTML += `${contador} &#x1F449`
+            contador++
+          }
+         
+         
+        })
+        
+    </script>
+</body>
+</html>

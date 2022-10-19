@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Média de Aluno v2.0</h1>
+    <button onclick="calculando()">Calcular média</button>
+    <section id="texto"><p>O resultado vai aparecer aqui...</p></section>
+    
+    <script>
+    const nome = prompt('Qual o nome do Aluno?')
+    let nota1 = Number(prompt(`Qual a primeira nota do ${nome}`))
+    let nota2 =Number(prompt(`Qual a segunda nota do ${nome}`))
+    let media = (nota1 + nota2)/2
+    function calculando() {
+        let resposta = document.querySelector('#texto')
+        resposta.innerHTML += `<p>Calculando a média final de ${nome}</p>`
+        resposta.innerHTML += `<p>As notas obtidas foram ${nota1} e ${nota2}</p>`
+        resposta.innerHTML += `A média final será: ${media}`
+        if (media <= 5) {
+            
+            resposta.innerHTML += `<strong style =color:'red';> <p>Estude um pouco mais!</p></strong>`
+            
+        }else if (media >=6){
+            resposta.innerHTML += `<p>Parabéns!</p>`
+        }
+    }
+
+    </script>
+</body>
+</html>

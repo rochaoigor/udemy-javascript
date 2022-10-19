@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <h2>Calculo JS</h2>
+        <p></p>
+        <button onclick= "calculo()">Calcular</button>
+        <section id="result"></section>
+    
+<script>
+function calculo() {
+    const num = Number(prompt('Escolha um numero'))
+    const resposta = document.querySelector('#result')
+    resposta.innerHTML = `<p>O numero analisado será: ${num}</p>`
+    resposta.innerHTML += `<p> O seu valor absoluto é:${Math.abs(num)} </p>`
+    resposta.innerHTML += `<p>O seu valor inteiro mais próximo é: ${Math.round(num)}`
+        resposta.innerHTML += `<p>A sua raiz quadrada é: ${Math.sqrt(num)}`
+            resposta.innerHTML += `<p>A sua raiz cubica é:${Math.cbrt(num)}</p>`
+            resposta.innerHTML += `<p>O valor de ${num}<sup>2</sup> é ${Math.pow(num,2)}</p>`
+            resposta.innerHTML += `<p>O valor de ${num}<sup>3</sup> é ${Math.pow(num,3)}</p>`
+
+}
+    </script>
+
+</body>
+</html>

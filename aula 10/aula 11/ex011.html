@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercitando</title>
+    <style>
+        * {
+            padding:0;
+            margin:0;
+        }
+        body {
+            font-family:Arial, Helvetica, sans-serif;
+            color:white;
+            background-color:rgb(40, 40, 109);
+        }
+        header {
+            background-color:black;
+        }
+        header h1 {
+            text-align:center;
+            padding:50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Qual País você mora?</h1>
+       
+    </header>
+    <p>Me diga mais sobre você...</p>
+    <input type="text" name="nacio" id="inacio">
+    <input type="button" value="verificar" onclick="clicar()">
+    <div id = 'res'></div>
+    <script>
+        function clicar() {
+            var txt = document.querySelector('input#inacio')
+            var res = document.querySelector('div#res')
+            if (txt.value != 'Brasil') {
+                res.innerHTML = `você é Estrangeiro`
+            }
+            else  {
+                res.innerHTML = `você é Brasileiro`
+            }
+        }
+    </script>
+</body>
+</html>

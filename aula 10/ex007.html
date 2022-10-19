@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+        }
+        body {
+            background-color:rgb(41, 41, 79);
+            color:white;
+            font-family:Arial, Helvetica, sans-serif;
+            
+        }
+        header h1 {
+            text-align:center;
+            color:white;
+        }
+        header {
+            padding:50px;
+            background-color:black;
+            border-radius:10px 7px;
+            box-shadow: 7px 5px black;
+        }
+        h1 {
+            margin-top:30px;
+        }
+ div#res p {
+    margin-top:20px;
+    font-size:2.5em;
+ }
+ input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+        
+    }
+    input {
+        padding:50px;
+        margin-top:20px;
+        margin-right:30px;
+        border-radius:50px;
+
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meus Estudos Javascript</h1>
+    </header>
+    
+    <h1>Somando Valores:</h1>
+    
+    <input type="number" id="txtn1" name="txtn1">
+    <input type="number" id="txtn2" name="txtn2">
+    <input type="button" value="somar" onclick="Somar()">
+    <div id="res"><p>Resultado:</p></div>
+    <script>
+        function Somar() {
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.getElementById('txtn2')
+            var  n1 = Number(tn1.value)
+            var n2 = Number (tn2.value)
+            var s = n1 + n2
+            var res = window.document.getElementById('res')
+            res.innerHTML = ` A soma entre ${n1} + ${n2} é: <Strong>  ${s} </strong> `
+        }
+        window.alert('Seja Bem-Vindo')
+        var nome = window.prompt('Qual seu nome?')
+        window.alert(' Seja bem-vindo(a): ' + nome)
+       
+    </script>
+</body>
+</html>

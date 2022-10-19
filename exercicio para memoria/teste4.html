@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Maior Valor</h1>
+    <button onclick="Calculo()">Clique Para Começar</button>
+    <section id="texto"></section>
+    <script>
+        function Calculo() {
+        let numero = Number(prompt('Digite um Número'))
+        let numero2 = Number(prompt('Digite Outro Número'))
+        let result = Math.max(numero, numero2)
+        let speak =  document.querySelector('#texto')
+        speak.innerHTML = `Analisando os valores de ${numero} e ${numero2}, o maior valor é ${result}`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+body {
+    background-color:aqua;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+section div.background-timer h1 {
+    font-family:'Courier New', Courier, monospace;
+text-indent:1rem;
+    font-size:3rem;
+padding-top:20px;
+padding-bottom:20px;
+
+}
+
+section {
+    border-radius:20px;
+    background-color:#fff;
+    width:520px;
+    height:250px;
+    position:relative;
+    top:50%;
+    lefT:50%;
+    transform:translate(-50%,50%);
+}
+
+button {
+    
+    cursor:pointer;
+    border-radius:10px;
+    font-weight:bold;
+    margin:10px;
+    padding:10px;
+    box-shadow:3px 4px rgba(0, 0, 0, 0.623);
+}
+
+button:hover {
+    background-color:rgba(128, 0, 128, 0.577);
+}
+
+#visor p {
+    font-size:2.5rem;
+    font-family:'Courier New', Courier, monospace;
+    font-weight:bold;
+    padding:10px;
+    
+}
+
+.pausado {
+    color:red;
+    
+}

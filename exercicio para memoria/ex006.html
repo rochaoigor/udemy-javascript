@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplas Ações</title>
+</head>
+<body>
+    <h1>Multiplas Ações</h1>
+    <button onclick="clicar()">Clique para Iniciar</button>
+    <p></p>
+    <script>
+function clicar() {
+    let pergunta1 = Number(prompt('Escolha um número'))
+    let pergunta2 = Number(prompt('Escolha outro número'))
+   let res = document.querySelector('p')
+    let pergunta3 = Number(prompt(`Valor informado: ${pergunta1} e ${pergunta2}. 
+    O que vamos fazer?
+    [1]Somar
+    [2]Subtrair
+    [3]Multiplicar
+    [4]Dividir`))
+    switch (pergunta3) {
+    case 1:
+        res.innerHTML += `<p>${pergunta1} + ${pergunta2} = ${pergunta1+pergunta2}</p>`
+        break
+        case 2:
+            res.innerHTML += `<p>${pergunta1} - ${pergunta2} = ${pergunta1-pergunta2}</p>`
+            break
+            case 3: 
+            res.innerHTML += `<p>${pergunta1} x ${pergunta2} = ${pergunta1*pergunta2}</p>`
+            break
+            case 4:
+                res.innerHTML += `<p>${pergunta1} / ${pergunta2} = ${pergunta1/pergunta2}</p>`
+                break
+        
+  }
+}
+    </script>
+</body>
+</html>

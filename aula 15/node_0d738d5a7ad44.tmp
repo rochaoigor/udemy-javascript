@@ -1,0 +1,16 @@
+/* SetInterval e Settimeout */
+
+function mostrahora() {
+    let data = new Date;
+    return data.toLocaleTimeString('Pt-BR', {
+    hour12:false
+});
+}
+
+function Interval() {
+    console.log(mostrahora())
+}
+
+setInterval(Interval, 1000);
+
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estações do Ano</title>
+</head>
+
+<body>
+    <h1>Estações do Ano</h1>
+    <button onclick="calc()">Clique aqui!</button>
+    <p>Clique no botão acima para informar o mês</p>
+    <script>
+        function calc() {
+            let pergunta = prompt('Digite o mês por extenso. (ex:Setembro)')
+            let res = document.querySelector('p')
+            let estação;
+            switch (pergunta) {
+                case 'Janeiro': case 'Fevereiro': case 'Dezembro':
+                    estação = 'Verão'
+                    res.innerHTML = `No mês de ${pergunta}, estamos na Estação ${estação}`
+                    break
+                case 'Março': case 'Maio': case 'Abril':
+                    estação = 'Outono'
+                    res.innerHTML = `No mês de ${pergunta}, estamos na estação ${estação}`
+                    break
+                case 'Junho': case 'Julho': case 'Agosto':
+                    estação = 'Inverno'
+                    res.innerHTML = `No mês de ${pergunta}, estamos na estação ${estação}`
+                    break
+                case 'Setembro': case 'Outubro': case 'Novembro':
+                    estação = 'Primavera'
+                    res.innerHTML = `No mês de ${pergunta}, estamos na estação ${estação}`
+            }
+        }
+    </script>
+</body>
+
+</html>
