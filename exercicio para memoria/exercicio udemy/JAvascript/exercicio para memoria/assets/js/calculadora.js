@@ -1,9 +1,7 @@
 function criaCalculadora() {
     return {
         display: document.querySelector('.display'),
-        botaoClear: document.querySelector('.botao-clear'),
-        botaoIgual: document.querySelector('botao-eq'),
-
+        
         get inicia() {
             this.cliqueBotoes
             this.pressionaEnter()
@@ -38,6 +36,7 @@ function criaCalculadora() {
             }
         },
         get cliqueBotoes() {
+            //this -> é a calculadora//
             document.addEventListener('click', function (e) {
                 const el = e.target;
 
@@ -53,7 +52,7 @@ function criaCalculadora() {
                 if (el.classList.contains('botao-eq')) {
                     this.realizaConta()
                 }
-            }.bind(this));
+            }.bind(this)); //faz usar o this da calculadora//
         },
         botaoDisplay(valor) {
             this.display.value += valor;

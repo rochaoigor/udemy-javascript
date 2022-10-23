@@ -11,4 +11,3 @@
     console.log(idade,peso,altura)
 })(27,65,1.72);
 
-const nome = 'Qualquer'

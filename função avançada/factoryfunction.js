@@ -6,9 +6,9 @@ function criaPessoa(nome, sobrenome,altura,peso){
          },
 
          set nomecompleto(valor) {
-          valor = valor.split(' ');
-          this.nome = valor.shift()
-          this.sobrenome = valor.join(' ');
+          valor = valor.split(' '); //separa o nome em forma de array
+          this.nome = valor.shift(); //Retornar o valor da primeira variavel, e remover o primeiro valor da outra;
+          this.sobrenome = valor.join(' ');// junta as strings e separa com espaços ('');
          },
 
          fala(assunto) {
@@ -28,4 +28,5 @@ function criaPessoa(nome, sobrenome,altura,peso){
 p1 = criaPessoa('Igor','Rocha',1.8 ,60)
 p2 = criaPessoa('Carol', 'Magliano', 1.58,60)
 p1.nomecompleto = 'Rogério Roberto Silva'
-console.log(p1.nomecompleto)
+p2.nomecompleto = 'Caralhas de nome'
+console.log(p2.nomecompleto)
