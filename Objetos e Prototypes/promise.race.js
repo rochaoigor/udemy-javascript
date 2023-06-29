@@ -3,30 +3,26 @@ function shuffle(min, max) {
     max *= 1000;
     return Math.floor(Math.random() * (max - min) + min);
 }
-
 function wait(msg, time) {
 return new Promise((resolve, reject) => {
-    if(typeof msg !== 'string' ) {
-        reject(false)
-        return;
-    }
-   
     setTimeout( () => {
+        if(typeof msg !== 'string' )  {
+            reject(false)
+            return;
+        }
         resolve(msg.toUpperCase() + ' - Passei pela Promise');
         return;
-      }, time)
+      }, time)     
 })
 }
 const promises = [
-    'Primeiro Valor',
-    wait('Primeira Promise', 3000),
-    wait('Segunda Promise', 500),
-    wait('Terceira Promise',1000),
-    wait(5, 200),
-    'Outro Valor'
+    wait(1000, shuffle(1,5)),
+    wait('Primeira Promise', shuffle(1,5)),
+    wait('Segunda Promise', shuffle(1,5)),
+    wait('Terceira Promise',shuffle(1,5)), 
 ];
 
-Promise.all(promises)
+Promise.race(promises)
 .then(valor => {
     console.log(valor)
 })
