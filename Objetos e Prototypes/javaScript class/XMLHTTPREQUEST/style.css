@@ -1,0 +1,40 @@
+* {
+    
+    box-sizing:border-box;
+}
+
+body {
+    background-color:aquamarine;
+}
+
+
+.login {
+    background-color:#fff;
+    padding:30px;
+    text-align:center;
+    font-size:30px;
+}
+
+.navigation {
+    display:-webkit-flex;
+    display:flex;
+}
+
+.column {
+    -webkit-flex:1;
+    flex:1;
+    padding:10px;
+    padding:10px;
+    height:500px;
+    text-align:center;
+    border:1px solid black;
+    background-color:#ccc;
+}
+
+.footer {
+   
+        background-color: #f1f1f1;
+        padding: 10px;
+        text-align: center;
+    
+}

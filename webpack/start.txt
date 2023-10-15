@@ -1,0 +1,56 @@
+npm install --save-dev @babel/presets -env @babel/core @babel/cli babel-loader webpack webpack-cli regenerator-runtime core-js@2
+
+
+##Correção do Regenerator-runtime e core-js@2;
+
+-- npm i core-js regenerator-runtime
+
+--
+
+##Apos instalação, criaremos o seguinte arquivo:
+
+-- webpack.config.js
+
+-- const path = require('path') // CommonJs
+-- module.exports = {
+    mode: 'development', (ou production [para minificar])
+    entry: './src/index.js',
+    output: {
+path: path.resolve(__dirname,'public', 'assets', js),
+filename: 'bundle.js'
+    }, 
+    module: {
+        rules: [
+            {
+                exclude: /node_modules/,
+                test: /\.js$/,
+                use:{
+                    loader:'babel-loader',
+                    options: {
+                        presets:['@babel/env']
+                    }
+                }
+            }
+        ]
+    },
+    devtool:'source-map' 
+
+}
+
+
+## Criar pasta SRC
+
+-- Criar "index.js" para o boilerplate.
+
+## Criar pasta Public
+
+-- criar pasta assets (css, js, etc)
+## Documentação
+
+-- webpack.org
+
+## Em package.json 
+
+- em scripts, criaremos um objeto com "loadWebpack": "webpack -w"
+
+- executando : abre o terminal 'npm run nome-do-script'

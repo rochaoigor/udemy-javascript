@@ -1,0 +1,25 @@
+npm install @babel/cli @babel/preset-env @babel/core
+
+
+## Convertendo o codigo para babel
+
+npx babel -nomedoarquivo.js- -o bundle.js --presets=@babel/env
+
+## Convertendo o código automaticamente.
+
+
+Primeiro iremos no arquivo Package.json
+
+- em Scripts, criaremos um objeto {} e apos o errortest ,
+
+
+- Criaremos:
+
+"babel": "babel ./main.js -o ./bundle.js --presets=@babel/env -w"
+
+## Executando Babel 
+
+npm run babel
+
+
+## Sempre que alterarmos o código, precisamos usar CTRL + C no terminal para parar a execução e após startar de novo.
