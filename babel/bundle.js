@@ -10,4 +10,6 @@ var Produto = /*#__PURE__*/_createClass(function Produto(nome, valor) {
   _classCallCheck(this, Produto);
   this.nome = nome;
   this.valor = valor;
+  this.dataValidade = dataValidade;
+  this.codigoProduto = codigoProduto;
 });
